@@ -1,4 +1,6 @@
-﻿namespace Chapter_3_Ecapsulation
+﻿using System.Diagnostics;
+
+namespace Chapter_3_Ecapsulation
 {
     internal class Program
     {
@@ -12,6 +14,11 @@
             Console.WriteLine(bob.FavoriteToy);
             bob.FavoriteToy = "Boomerang";
             Console.WriteLine(bob.FavoriteToy);
+
+            Console.WriteLine(bob.WatchdogAbility);
+            bob.WatchdogAbility = 15;
+            Console.WriteLine(bob.WatchdogAbility);
+
         }
     }
 }

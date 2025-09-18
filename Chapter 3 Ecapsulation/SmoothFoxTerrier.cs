@@ -50,6 +50,21 @@ namespace Chapter_3_Ecapsulation
             }
         }
 
-
+        public int WatchdogAbility
+        {
+            get
+            {
+                return _watchdogAbility;
+            }
+            set
+            {
+                if (value > 10)
+                    this.WatchdogAbility = 10;
+                else if (value < 0)
+                    this.WatchdogAbility = 0;
+                else
+                    this.WatchdogAbility = value;
+            }
+        }
     }
 }
