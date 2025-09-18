@@ -16,17 +16,26 @@ namespace Chapter_3_Ecapsulation
         public static int HeatTolerance;
         
         //instance feild/Attributes
-        public string Name;
-        public int WatchdogAbility;
-        public string FavoriteToy;
+        private string _name;
+        private int _watchdogAbility;
+        private string _favoriteToy;
 
 
         //Contructor
         public SmoothFoxTerrier(string name, int w, string favToy)
         {
-            this.Name = name;
-            this.WatchdogAbility = w;
-            this.FavoriteToy = favToy;
+            this._name = name;
+            this._watchdogAbility = w;
+            this._favoriteToy = favToy;
+        }
+
+        //properties
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
         }
     }
 }
