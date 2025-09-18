@@ -37,5 +37,19 @@ namespace Chapter_3_Ecapsulation
                 return _name;
             }
         }
+
+        public string FavoriteToy
+        {
+            get
+            {
+                return _favoriteToy;
+            }
+            set
+            {
+                _favoriteToy = value;
+            }
+        }
+
+
     }
 }

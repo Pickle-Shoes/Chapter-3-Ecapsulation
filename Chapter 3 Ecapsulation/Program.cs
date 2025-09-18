@@ -8,6 +8,10 @@
 
             Console.WriteLine(bob.Name);
             Console.WriteLine(SmoothFoxTerrier.Energy);
+
+            Console.WriteLine(bob.FavoriteToy);
+            bob.FavoriteToy = "Boomerang";
+            Console.WriteLine(bob.FavoriteToy);
         }
     }
 }
