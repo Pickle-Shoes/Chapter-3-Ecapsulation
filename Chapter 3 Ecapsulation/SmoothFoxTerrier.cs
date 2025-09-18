@@ -11,7 +11,7 @@ namespace Chapter_3_Ecapsulation
         //Class fields/Attributes
         public static string Family;
         public static string AreaOfOrgin;
-        public static int Energy;
+        public const int Energy = 10;
         public static int ColdTolerance;
         public static int HeatTolerance;
         
