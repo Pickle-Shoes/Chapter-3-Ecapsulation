@@ -50,6 +50,7 @@ namespace Chapter_3_Ecapsulation
             }
         }
 
+
         public int WatchdogAbility
         {
             get
@@ -64,6 +65,14 @@ namespace Chapter_3_Ecapsulation
                     this.WatchdogAbility = 0;
                 else
                     this.WatchdogAbility = value;
+            }
+        }
+
+        public int ProtectionScore
+        {
+            get
+            {
+                return (int)Math.Floor((_watchdogAbility + ColdTolerance + HeatTolerance) / 3d);
             }
         }
     }
