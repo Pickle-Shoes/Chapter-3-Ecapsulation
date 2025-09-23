@@ -29,5 +29,17 @@ namespace Chapter_3_Ecapsulation
             return new ImmutableVector(X + deltaX, Y + deltaY, Z + deltaZ);
         }
 
+
+        //Class Mehtods
+        public static ImmutableVector EqualElementsVector(double initialValue)
+        {
+            return new ImmutableVector(initialValue, initialValue, initialValue);
+        }
+
+        public static ImmutableVector OrginVector()
+        {
+            return ImmutableVector.EqualElementsVector(0);
+        }
+
     }
 }
