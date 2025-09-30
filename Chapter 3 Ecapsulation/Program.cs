@@ -34,11 +34,18 @@ namespace Chapter_3_Ecapsulation
             Console.WriteLine($"X:{vec3.X} Y:{vec3.Y} Z:{vec3.Z}");
             */
 
-            Person Bob = new Person("Bob", "bob@mail.com");
             try
             {
-                Bob.Name = "Bill";
-                Bob.Age = 10;
+                Person bob = new Person("Bob", "bob@mail.com");
+                bob.Name = "Bill";
+                bob.Age = 10;
+                //Bob.EmailAddress = "bill@email.org";
+                bob.PhoneNumber = "605-867-5309";
+
+                Console.WriteLine(bob.Name);
+                Console.WriteLine(bob.Age);
+                Console.WriteLine(bob.EmailAddress);
+                Console.WriteLine(bob.PhoneNumber);
             }
             catch(Exception e)
             {
@@ -46,8 +53,9 @@ namespace Chapter_3_Ecapsulation
 
             }
 
-            Console.WriteLine(Bob.Name);
-            Console.WriteLine(Bob.Age);
+            
+
+
 
 
 

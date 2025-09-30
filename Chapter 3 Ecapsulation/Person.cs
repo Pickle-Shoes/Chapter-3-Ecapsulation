@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Chapter_3_Ecapsulation
@@ -18,16 +19,16 @@ namespace Chapter_3_Ecapsulation
         //constructor
         public Person(string name, string email)
         {
-            _name = name;
-            _emailAddress = email;
+            Name = name;
+            EmailAddress = email;
         }
 
         public Person(string name, string email, int age, string phone)
         {
-            _name = name;
-            _emailAddress = email;
-            _age = age;
-            _phoneNumber = phone;
+            Name = name;
+            EmailAddress = email;
+            Age = age;
+            PhoneNumber = phone;
         }
 
         //properties
@@ -57,5 +58,44 @@ namespace Chapter_3_Ecapsulation
             }
         }
 
+        public string EmailAddress
+        {
+            get { return _emailAddress; }
+
+            set 
+            {
+                if (Regex.IsMatch(value, "^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$"))
+                {
+                    _emailAddress = value;
+                }
+                else
+                {
+                    throw new Exception("Not a valid email");
+                }
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get { return _phoneNumber; }
+
+            set 
+            {
+                //make sure phone number is valid
+
+
+                if(Regex.IsMatch(value, "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$"))
+                {
+                    _phoneNumber = value;
+                }
+                else
+                {
+                    throw new Exception("invalid fomatted phone number");
+                }
+            }
+
+
+
+        }
     }
 }
